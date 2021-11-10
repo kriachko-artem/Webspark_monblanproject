@@ -4,12 +4,17 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="scripts/jquery-3.6.0.min.js"></script>
-	<script src="scripts/date-from-to.js"></script>
+	<script src="scripts/scrollup.js"></script>
+	<script defer src="scripts/datepicker.min.js"></script>
+	<script defer src="scripts/date-from-to.js"></script>
 	<script src="scripts/change-direction.js"></script>
+	<script src="scripts/load-more.js"></script>
 	<title>monblanproject</title>
 </head>
 <body>
@@ -35,10 +40,10 @@
 						</ul>
 					</div>
 					<div class="nav__menu__from-to">
+						<label for="date">Date</label>
 						<form>
-							<label for="date">Date</label>
-							<input type="date" id="date-from" name="date-from">
-							<input type="date" id="date-to" name="date-to">
+							<input type="text" id="date-from" value ="from"name="date-from" class="datepicker-here">
+							<input type="text" id="date-to" value ="to"name="date-to" class="datepicker-here">
 						</form>
 					</div>
 				</div>
@@ -68,6 +73,7 @@
 					</button>
 				</div>
 				<section class="images-list column">
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20.png" alt="">
@@ -107,6 +113,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-1.png" alt="">
@@ -146,6 +154,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-2.png" alt="">
@@ -185,6 +195,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-3.png" alt="">
@@ -224,6 +236,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-4.png" alt="">
@@ -263,6 +277,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-5.png" alt="">
@@ -302,6 +318,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-6.png" alt="">
@@ -341,6 +359,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-7.png" alt="">
@@ -380,6 +400,8 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-8.png" alt="">
@@ -418,11 +440,55 @@
 								<time id="upload-date" datetime="2016-04-11">11-04-2016</time>
 							</div>
 						</div>
-					</div><!-- 
+					</div>
+					</div>
+					<div class="item">
+					<div class="row">
+						<div class="img-holder">
+							<img src="./img/Rectangle 20.png" alt="">
+						</div>
+						<div class="image-info">
+						<div class="image-statistic">
+							<div class="today">
+								<h3>Today</h3>
+								<div class="stats">
+								<div class="likes-block">
+									<span class="likes-pict"></span>
+									<p id="likes">128</p>
+								</div>
+								<div class="comments-block">
+									<span class="comments-pict"></span>
+									<p id="comments">31</p>
+								</div>
+								</div>
+							</div>
+							<div class="earlyer">
+								<h3 id="date-likes">9-08-2016</h3>
+								<div class="stats">
+								<div class="likes-block">
+									<span class="likes-pict"></span>
+									<p id="likes">67</p>
+								</div>
+								<div class="comments-block">
+									<span class="comments-pict"></span>
+									<p id="comments">22</p>
+								</div>
+							</div>
+							</div>
+							</div>
+							<div class="when_upload">
+								<h3>Image upload</h3>
+								<time id="upload-date" datetime="2016-04-11">11-04-2016</time>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-1.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -445,9 +511,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -456,10 +523,13 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-2.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -482,9 +552,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -493,10 +564,13 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-3.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -519,9 +593,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -530,10 +605,13 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-4.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -556,9 +634,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -567,10 +646,13 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-5.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -593,9 +675,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -604,10 +687,13 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-6.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -630,9 +716,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -641,10 +728,13 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-7.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -667,9 +757,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -678,10 +769,13 @@
 							</div>
 						</div>
 					</div>
+					</div>
+					<div class="item">
 					<div class="row">
 						<div class="img-holder">
 							<img src="./img/Rectangle 20-8.png" alt="">
 						</div>
+						<div class="image-info">
 						<div class="image-statistic">
 							<div class="today">
 								<h3>Today</h3>
@@ -704,9 +798,10 @@
 									<p id="likes">67</p>
 								</div>
 								<div class="comments-block">
-									<span class="comments-block"></span>
+									<span class="comments-pict"></span>
 									<p id="comments">22</p>
 								</div>
+							</div>
 							</div>
 							</div>
 							<div class="when_upload">
@@ -714,11 +809,16 @@
 								<time id="upload-date" datetime="2016-04-11">11-04-2016</time>
 							</div>
 						</div>
-					</div> -->
+					</div>
+					</div> 
+					
 				</section>
 				<button id="load-more">LOAD MORE</button>
 			</div>
 		</main>
+		<div class="scrollup">
+			<i class="fa fa-chevron-up"></i>
+		</div>
 	</div>
 </body>
 </html>
