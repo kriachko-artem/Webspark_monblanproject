@@ -5,7 +5,7 @@
 }
 #wrapper:before{
 	content: '';
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 50%;
@@ -16,7 +16,7 @@
 }
 #wrapper:after{
 	content: '';
-	position: fixed;
+	position: absolute;
 	bottom: 0px;
 	right: 0;
 	width: 210px;
@@ -106,19 +106,6 @@ nav .nav__menu__info__items li:nth-child(1){
 nav .nav__menu__info__items li:nth-child(2){
 	margin-right: 17px;
 }
-nav .nav__menu__from-to{
-	margin-top: 23px;
-}
-nav .nav__menu__from-to label{
-	margin-right: 11px;
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 19px;
-	color: #000000;
-}
-
 
 		/*== Main ==*/
 main{
@@ -181,23 +168,23 @@ main .directions .tiles{
 
 	/*= Images list =*/
 
-	/*== Rows ==*/
-main .images-list.column{
+main .images-list{
 	width: 100%;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 203px 203px 203px 203px;
+	grid-column-gap: 8px;
+	grid-row-gap: 16px;
 	margin-bottom: 33px;
 }
 main .row{
-	width: 100%;
-	height: 86px;
+	width: 203px;
 	display: flex;
-	margin-bottom: 8px;
+	flex-direction: column;
 	background-color: #fff;
 }
 main .row .img-holder{
-	width: 86px;
-	height: 86px;
+	width: 100%;
+	height: 203px;
 	flex-shrink: 0;
 }
 main .row .img-holder img{
@@ -207,10 +194,18 @@ main .row .img-holder img{
 main .row .image-info{
 	width: 100%;
 	height: 100%;
-	padding: 0 79px 0 30px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	padding: 12px 12px 18px;
+	box-sizing: border-box;
+}
+main .row .image-statistic{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 28px;
 }
 main .row .image-info h3{
 	font-family: 'Roboto';
@@ -230,37 +225,44 @@ main .row .image-info p,time{
 
 	color: #000000;
 }
-main .row .image-statistic{
-	width: 60%;
-	justify-content: space-between;
+main .row .image-info .stats{
 	display: flex;
-}
-main .row .image-statistic .stats{
-	display: flex;
+	flex-direction: column;
 	margin-top: 10px;
 }
 main .row .image-statistic .stats .likes-block,
 main .row .image-statistic .stats .comments-block{
 	display: flex;
 	align-items: center;
-	margin-right: 20px;
+	margin-bottom: 10px;
 }
-main .row .image-statistic .stats .likes-pict{
+main .row .image-info .stats .likes-pict{
 	display: block;
-	width: 16px;
+	width: 15px;
 	height: 14px;
 	margin-right: 8px;
 	background: url(../img/likes.png) no-repeat;
 }
-main .row .image-statistic .stats .comments-pict{
+main .row .image-info .stats .comments-pict{
 	display: block;
-	width: 16px;
+	width: 15px;
 	height: 15px;
 	margin-right: 8px;
 	background: url(../img/comments.png) no-repeat;
 }
-main .row .when_upload h3{
-	margin-bottom: 10px;
+main .row .image-info .when_upload{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+main .row .image-info .when_upload h3{
+	font-size: 14px;
+	line-height: 16px;
+}
+main .row .image-info .when_upload time{
+	font-size: 12px;
+	line-height: 14px;
 }
 #load-more{
 	display: block;
@@ -280,112 +282,8 @@ main .row .when_upload h3{
 	letter-spacing: -0.03em;
 
 	color: #929292;
-	transition: 0.3s;
-}
-#load-more:hover{
-	color: #585858;
-	border-color: #585858;
 }
 
-
-	/*== Tiles ==*/
-
-main .images-list.grid{
-	width: 100%;
-	display: grid;
-	grid-template-columns: 203px 203px 203px 203px;
-	grid-column-gap: 8px;
-	grid-row-gap: 16px;
-	margin-bottom: 33px;
-}
-main .tile{
-	width: 203px;
-	display: flex;
-	flex-direction: column;
-	background-color: #fff;
-}
-main .tile .img-holder{
-	width: 100%;
-	height: 203px;
-	flex-shrink: 0;
-}
-main .tile .img-holder img{
-	width: 100%;
-	height: 100%;
-}
-main .tile .image-info{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding: 12px 12px 18px;
-	box-sizing: border-box;
-}
-main .tile .image-statistic{
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	margin-bottom: 28px;
-}
-main .tile .image-info h3{
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 19px;
-
-	color: #000000;
-}
-main .tile .image-info p,time{
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 16px;
-
-	color: #000000;
-}
-main .tile .image-info .stats{
-	display: flex;
-	flex-direction: column;
-	margin-top: 10px;
-}
-main .tile .image-statistic .stats .likes-block,
-main .tile .image-statistic .stats .comments-block{
-	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
-}
-main .tile .image-info .stats .likes-pict{
-	display: block;
-	width: 15px;
-	height: 14px;
-	margin-right: 8px;
-	background: url(../img/likes.png) no-repeat;
-}
-main .tile .image-info .stats .comments-pict{
-	display: block;
-	width: 15px;
-	height: 15px;
-	margin-right: 8px;
-	background: url(../img/comments.png) no-repeat;
-}
-main .tile .image-info .when_upload{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-main .tile .image-info .when_upload h3{
-	font-size: 14px;
-	line-height: 16px;
-}
-main .tile .image-info .when_upload time{
-	font-size: 12px;
-	line-height: 14px;
-}
 
 
 
