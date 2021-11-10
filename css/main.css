@@ -567,6 +567,52 @@ main .row .when_upload{
 main .row .image-info p,time{
 	font-size: 10px;
 }
+main .images-list.grid{
+	grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+main .tile{
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+main .tile .img-holder{
+	width: 100%;
+	height: 300px;
+	flex-shrink: 0;
+}
+main .directions button .square{
+	width: 8px;
+	height: 8px;
+}
+main .directions button .stripe{
+	width: 20px;
+	height: 3px;
+	margin-top: 2px;
+}
+main .directions button span{
+	background-color: #C8C7C7;
+	transition: 0.3s;
+}
+main .directions button:hover span{
+	background-color: #3D8EDA;
+}
+main .directions button:active span{
+	background-color: #3D8EDA;
+}
+
+main .directions .rows{
+	width: 30px;
+	grid-template-columns: 8px 8px 8px;
+	grid-column-gap: 3px;
+	grid-row-gap: 3px;
+}
+main .directions .tiles{
+	width: 24px;
+	grid-template-columns: 6px 15px;
+	grid-column-gap: 3px;
+	grid-row-gap: 2px;
+}
 }
 
 
