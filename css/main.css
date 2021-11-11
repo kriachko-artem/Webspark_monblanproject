@@ -170,10 +170,10 @@ main{
 	/*= Direction Buttons =*/
 
 main .directions {
-	align-self: end;
 	display: flex;
 	position: relative;
 	margin-bottom: 23px;
+	justify-content: end;
 }
 main .directions button{
 	padding: 0;
