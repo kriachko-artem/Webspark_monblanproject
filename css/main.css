@@ -99,8 +99,12 @@ nav .nav__menu__head .start_date {
 	font-size: 13px;
 	line-height: 15px;
 	letter-spacing: -0.03em;
-
 	color: #3D8EDA;
+	transition: 0.3s;
+}
+nav .nav__menu__head .start_date:hover{
+	border-color: #0153a0;
+	color: #0153a0;
 }
 nav .nav__menu__info__items{
 	display: flex;
