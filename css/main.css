@@ -559,14 +559,6 @@ main .row .image-statistic .stats .comments-pict{
 main .row .when_upload{
 	justify-content: space-between;
 }
-}
-@media screen and (max-width : 360px)  {
-	main .row .image-info h3{
-	font-size: 10px;
-}
-main .row .image-info p,time{
-	font-size: 10px;
-}
 main .images-list.grid{
 	grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
 }
@@ -590,17 +582,6 @@ main .directions button .stripe{
 	height: 3px;
 	margin-top: 2px;
 }
-main .directions button span{
-	background-color: #C8C7C7;
-	transition: 0.3s;
-}
-main .directions button:hover span{
-	background-color: #3D8EDA;
-}
-main .directions button:active span{
-	background-color: #3D8EDA;
-}
-
 main .directions .rows{
 	width: 30px;
 	grid-template-columns: 8px 8px 8px;
@@ -613,6 +594,15 @@ main .directions .tiles{
 	grid-column-gap: 3px;
 	grid-row-gap: 2px;
 }
+}
+@media screen and (max-width : 360px)  {
+	main .row .image-info h3{
+	font-size: 10px;
+}
+main .row .image-info p,time{
+	font-size: 10px;
+}
+
 }
 
 
